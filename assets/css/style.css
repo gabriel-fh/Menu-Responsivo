@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+header {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 10rem;
+    background-color: #ccc;
+}
+
+.logotipo {
+    height: 90%;
+    width: auto;
+    display: grid;
+    place-items: center;
+}
+
+.logotipo img {
+    height: 7rem;
+}
+
+.menu.list ul li{
+    list-style: none;
+    display: inline;
+    margin-right: 1.5rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    color: #242424;
+    position: relative;
+}
+
+.menu.list ul li::after{
+    position: absolute;
+    content: '';
+    height: .3rem;
+    width: 100%;
+    background-color: #242424;
+    left: 0;
+    bottom: -5px;
+    transform:scaleX(0);
+    transform-origin: right;
+    transition: transform .6s;
+}
+
+.menu.list ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
